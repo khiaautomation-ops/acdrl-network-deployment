@@ -1,0 +1,13 @@
+# --- Core Deep Learning Framework ---
+torch
+torchvision
+
+# --- Scientific Computing & Math ---
+numpy
+pandas
+scipy
+
+# --- RL Environment & Simulation ---
+gymnasium
+matplotlib
+seaborn
