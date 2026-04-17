@@ -115,38 +115,6 @@ class BaseStationDeploymentEnv():
 
         return initial_state
 
-    # def calculate_energy_consumption(self, previous_locations, new_locations):
-    #     # Calculate the energy consumption based on the distance to served locations and actions
-    #     energy_consumption = np.zeros(len(new_locations))
-    #     traffic_served = np.zeros(len(new_locations))
-    #
-    #     # print('current', previous_locations)
-    #     # print('next', locations)
-    #     # print('action', actions)
-    #     """Calculate energy and traffic served at each base station based on movement."""
-    #     for i, (prev, new) in enumerate(zip(previous_locations, new_locations)):
-    #         if prev != new:
-    #             # Unable to fly if energy_consumption is higher than maximum energy capacity
-    #             distance = self.fly_distances[prev][new]
-    #             self.energy_consumption[i] = self.active_energy_rate + self.grasp_energy_rate + (
-    #                         self.P_fly * distance / self.v)
-    #             self.traffic_served[i] = min(self.capacity_constraints[i], self.traffic_load[new])
-    #             # Unable to fly if energy_consumption is higher than maximum energy capacity
-    #             if (self.energy_consumption[i] >= self.energy_constraints[i]):
-    #                 # Remain in current location as energy is not enough to fly
-    #                 energy_violation = self.energy_consumption[i] - self.energy_constraints[i]
-    #                 self.energy_constraint_penalty[i] = np.log(energy_violation + 1)  # Adding 1 to avoid log(0)
-    #                 self.energy_violation_count += 1
-    #                 # print('Energy violation')
-    #                 self.energy_consumption[i] = self.active_energy_rate + self.grasp_energy_rate
-    #                 self.traffic_served[i] = self.traffic_load[prev]
-    #                 self.locations[i] = prev
-    #         else:
-    #             self.energy_consumption[i] = self.active_energy_rate + self.grasp_energy_rate
-    #             self.traffic_served[i] = min(self.capacity_constraints[i], self.traffic_load[prev])
-    #
-    #     return self.energy_consumption, self.traffic_served, self.locations
-
     def calculate_energy_consumption(self, previous_locations, new_locations):
         # ---------------------------------------------------------
         # PRACTICALITY UPDATE 1: Interference Modeling
