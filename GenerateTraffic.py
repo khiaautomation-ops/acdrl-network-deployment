@@ -32,25 +32,6 @@ class TrafficSimulation:
         log_V_n = np.random.lognormal(mean=np.log(V) - 0.5 * sigma, sigma=sigma)
         return log_V_n
 
-    # def simulate_traffic(self):
-    #     # Generate data to fit the model
-    #     t = np.linspace(0, 24, self.M)
-    #
-    #     # mean traffic volume
-    #     Vmean = 173.29
-    #     A1, f1, phi1 = 89.83, 1 / 12, 3.08
-    #     A2, f2, phi2 = 52.6, 1 / 6, 2.08
-    #     A3, f3, phi3 = 16.68, 1 / 4, 1.13
-    #     params = [Vmean, A1, f1, phi1, A2, f2, phi2, A3, f3, phi3]
-    #
-    #     # Define the sinusoid superposition model
-    #     self.V = self.sinusoid_superposition(t, *params)
-    #
-    #     # Generate V_m values
-    #     V_m = self.generate_V_m(self.V, self.sigma)
-    #
-    #     return V_m
-
     def simulate_traffic(self, profile_type="diurnal"):
         t = np.linspace(0, 24, self.M)
 
@@ -91,14 +72,6 @@ class TrafficSimulation:
         # Generate V_m values
         V_m = self.generate_V_m(self.V, self.sigma)
         return V_m
-
-# traffic = TrafficSimulation(M=120, sigma=1.3)
-# result = list(np.zeros(24))
-#
-# for epoch in range(24):
-#     result[epoch] = traffic.simulate_traffic()
-#
-# np.save('demand_data_120.npy', result)
 
 traffic = TrafficSimulation(M=120, sigma=1.3)
 profiles = ["diurnal", "flat", "bursty", "high_variance"]
