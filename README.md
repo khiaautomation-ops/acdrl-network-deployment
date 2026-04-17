@@ -11,7 +11,7 @@ Developed by the Co-founder of **KHIA AI** under the supervision of professors a
 
 ---
 
-## 📌 Overview
+## Overview
 
 The project implements an adaptive, energy-efficient framework for the deployment of **Robotic Airborne Base Stations (RABS)**. By leveraging DRL, the system dynamically optimizes the placement of airborne nodes to:
 * **Maximize Coverage:** Adapting to fluctuating spatio-temporal traffic.
