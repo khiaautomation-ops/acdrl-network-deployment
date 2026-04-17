@@ -1,33 +1,52 @@
-Deep Reinforcement Learning Algorithm for Adaptive & Energy-Efficient Deployment of Robotic Airborne Base Stations (RABS)
+# Deep Reinforcement Learning for Adaptive & Energy-Efficient RABS Deployment
 
-This repository provides the official technical implementation of the architecture proposed in our IEEE paper on Deep Reinforcement Learning (DRL) for autonomous network infrastructure. This work was developed by our Co-founder at KHIA AI under the supervision of Professors at École de technologie supérieure (ÉTS) and supported by FRQNT (Quebec).
+[![IEEE Xplore](https://img.shields.io/badge/Paper-IEEE%20TNSM-blue)](https://doi.org/10.1109/TNSM.2026.3678488)
 
-The project implements an adaptive, energy-efficient framework for the deployment of Robotic Airborne Base Stations (RABS). By leveraging DRL, the system dynamically optimizes the placement of airborne nodes to maximize coverage while minimizing energy consumption in fluctuating traffic environments.
+This repository contains the official technical implementation of the architecture proposed in our IEEE paper regarding **Deep Reinforcement Learning (DRL)** for autonomous network infrastructure.
 
-Key Technical Features:
-1. Dynamic Traffic Profiling: Automated generation of spatio-temporal traffic demand.
-2. DRL-Driven Optimization: Implementation of Multi Agents ACDRL for real-time RABS positioning.
-3. Energy-Aware Deployment: Specialized reward functions focusing on maximizing battery life and operational efficiency.
+Developed by the Co-founder of **KHIA AI** under the supervision of professors at **École de technologie supérieure (ÉTS)** and supported by **FRQNT (Quebec)**.
 
-Getting Started
-1. Environment Setup
+> [!WARNING]
+> **Research Code Disclaimer:** This is the original research implementation code used for our IEEE paper. It is provided 'as-is' for educational purposes and has not been refactored for production-grade software environments.
+
+---
+
+## 📌 Overview
+
+The project implements an adaptive, energy-efficient framework for the deployment of **Robotic Airborne Base Stations (RABS)**. By leveraging DRL, the system dynamically optimizes the placement of airborne nodes to:
+* **Maximize Coverage:** Adapting to fluctuating spatio-temporal traffic.
+* **Optimize Energy:** Specialized reward functions focused on battery life and operational efficiency.
+
+### Key Technical Features
+1.  **Dynamic Traffic Profiling:** Automated generation of spatio-temporal traffic demand.
+2.  **DRL-Driven Optimization:** Implementation of **Multi-Agent ACDRL** for real-time RABS positioning.
+3.  **Energy-Aware Deployment:** Intelligent power management within the DRL agent's logic.
+
+---
+
+## Getting Started
+### 1. Environment Setup
 We recommend using a virtual environment to manage dependencies:
 
-2. Data Preparation
-The system relies on traffic demand profiles and initial placement configurations.
-Run the following modules to prepare the environment:
-- Traffic Profiles: Generate demand data using the traffic code files, "GenerateTraffic.py"
-- RABS Placement: Initialize the spatial coordinates for the airborne stations, "RABS_Placement.py"
+### **2. Data Preparation**
+The system relies on traffic demand profiles and initial placement configurations. Run the following modules to prepare the environment:
+Traffic Profiles: Generate demand data.
+Bash
+python GenerateTraffic.py
+RABS Placement: Initialize spatial coordinates for the airborne stations.
+Bash
+python RABS_Placement.py
 
-3. Execution & Evaluation
-Run the different models separately to compare performance metrics (e.g., Energy Efficiency).
+### **3. Execution & Evaluation**
+Run the individual DRL model modules to compare performance metrics such as Energy Efficiency and Coverage Ratio across different scenarios.
 
-📖 Technical Background & Citation
-This software is grounded in rigorous, peer-reviewed methodology published in IEEE Transactions on Network and Service Management.
+📖 Citation & Technical Background
+This software is grounded in the peer-reviewed methodology published in IEEE Transactions on Network and Service Management.
 
-Full Citation:
+**Full Citation:**
 E. Theingi, L. Sboui and D. Naboulsi, "Adaptive and Energy-Efficient Deployment of Robotic Airborne Base Stations: A Deep Reinforcement Learning Approach," in IEEE Transactions on Network and Service Management, vol. 23, pp. 3707-3721, 2026, doi: 10.1109/TNSM.2026.3678488.
 
+BibTeX
 Code snippet
 @article{theingi2026rabs,
   title={Adaptive and Energy-Efficient Deployment of Robotic Airborne Base Stations: A Deep Reinforcement Learning Approach},
